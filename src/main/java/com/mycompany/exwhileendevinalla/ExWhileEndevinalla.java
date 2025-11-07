@@ -15,11 +15,15 @@ public class ExWhileEndevinalla {
         Scanner scanner = new Scanner(System.in);
         int nombre;
         int randomnum = (int)(Math.random() * 11);
-        do{
+        try{
+          do{
         System.out.println();
         System.out.println("Digues un numero de l'1 al 10: ");
         nombre = scanner.nextInt();
         System.out.println("> " + nombre);
-        } while (!(nombre == randomnum));
+        } while (!(nombre == randomnum));  
+        }catch (InputMismatchException e){
+            System.out.println("Has de ficar un numero, no una lletra");
+        }
     }
 }
