@@ -21,6 +21,9 @@ public class ExWhileEndevinalla {
         System.out.println("Digues un numero de l'1 al 10: ");
         nombre = scanner.nextInt();
         System.out.println("> " + nombre);
+        if (nombre != randomnum){
+            System.out.println("No has endevinat el nombre");
+        }
         } while (!(nombre == randomnum));  
         }catch (InputMismatchException e){
             System.out.println("Has de ficar un numero, no una lletra");
